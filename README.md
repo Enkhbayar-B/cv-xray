@@ -39,6 +39,36 @@ This will:</br>
  - Save the model to unet_classifier.pth</br>
  
  </br>
+
+ ## 📊 Training Configuration Summary
+
+<pre>
+╒═══════════════════════╤═══════════════════════════════════════════════════════════════════╕
+│ Parameter             │ Value                                                             │
+╞═══════════════════════╪═══════════════════════════════════════════════════════════════════╡
+│ Model Architecture    │ UNetClassifier                                                    │
+│ Input Channels        │ 3                                                                 │
+│ Output Classes        │ 2                                                                 │
+│ Feature Sizes         │ [256, 512, 1024, 2048, 4096]                                      │
+│ Loss Function         │ FPFNPenalizedCELoss                                               │
+│ False Negative Weight │ 3.0                                                               │
+│ False Positive Weight │ 3.0                                                               │
+│ Optimizer             │ Adam                                                              │
+│ Learning Rate         │ 0.001                                                             │
+│ Weight Decay          │ 1e-05                                                             │
+│ Batch Size            │ 4                                                                 │
+│ Epochs                │ 100                                                               │
+│ Train Augmentations   │ Resize, RandomHorizontalFlip, RandomRotation, ToTensor, Normalize │
+│ Val/Test Transforms   │ Resize, ToTensor, Normalize                                       │
+│ Normalization Mean    │ [0.0, 0.0, 0.0]                                                   │
+│ Normalization Std     │ [1.0, 1.0, 1.0]                                                   │
+│ Train Dataset Path    │ /home/bay/codes/unet/xray/train                                   │
+│ Val Dataset Path      │ /home/bay/codes/unet/xray/val                                     │
+│ Test Dataset Path     │ /home/bay/codes/unet/xray/test                                    │
+│ Device                │ cuda                                                              │
+│ Model Save As         │ unet_classifier.pth                                               │
+╘═══════════════════════╧═══════════════════════════════════════════════════════════════════╛
+</pre>
  
  ## 🔍 3. infer_unet.py – Run Inference
  
