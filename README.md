@@ -55,3 +55,23 @@ File: xray/inf/predictions.txt
 <pre>
 img001.jpg	pneumonia
 img002.jpg	normal</pre>
+
+## 📝 Notes
+
+ - The model expects input images to be RGB and sized to 256×256.
+ 
+ - Make sure the label classes (normal, pneumonia) in train/val/test are consistent and match the order used in training.
+ 
+ - Inference will skip over non-image files and log any processing errors without crashing.
+ 
+## 🔧 Customization
+
+You can easily tweak:
+
+ - features in the UNet model (more/less depth)
+
+ - FN/FP weights in the loss function
+
+ - Number of output classes
+
+ - Data augmentations or normalization in train_unet.py
