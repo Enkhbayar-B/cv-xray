@@ -1,0 +1,15 @@
+IM-0023-0001.jpeg	normal
+IM-0025-0001.jpeg	normal
+IM-0027-0001.jpeg	normal
+IM-0028-0001.jpeg	normal
+IM-0029-0001.jpeg	normal
+IM-0031-0001.jpeg	normal
+IM-0035-0001.jpeg	normal
+IM-0036-0001.jpeg	normal
+IM-0037-0001.jpeg	normal
+IM-0046-0001.jpeg	normal
+inf1.png	normal
+inf146.png	pneumonia
+inf147.png	pneumonia
+person60_virus_117.jpeg	pneumonia
+person61_virus_118.jpeg	pneumonia
