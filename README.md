@@ -1,8 +1,57 @@
-#🧠 UNet-Based Image Classifier for X-ray Diagnosis
-This project implements an image classification system using a UNet-inspired convolutional neural network in PyTorch. It supports:
+## 🧠 UNet-Based Image Classifier for X-ray Diagnosis
 
-Custom training with penalized loss (False Positive/Negative aware)
+This project implements an image classification system using a UNet-inspired convolutional neural network in PyTorch. </br>
+It supports:
+ - Custom training with penalized loss (False Positive/Negative aware)</br>
+ - Easy model saving and loading</br>
+ - Folder-based image classification inference</br>
 
-Easy model saving and loading
+## 📁 Project Structure
 
-Folder-based image classification inference
+unet/</br>
+├── train_unet.py&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Train and validate the UNet model</br>
+├── unet_model.py&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# UNetClassifier model + custom loss</br>
+├── infer_unet.py&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Inference script for predicting new images</br>
+├── unet_classifier.pth&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Saved trained model (generated after training)</br>
+├── README.md&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Project documentation</br>
+└── xray/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Image dataset folder (same level as scripts)</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── train/</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── val/</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── test/</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── inf/</br>
+</br>
+## 🧠 1. unet_model.py – Model & Custom Loss
+
+This module defines:</br>
+UNetClassifier: A downsampling-only UNet encoder model adapted for image classification.</br>
+FPFNPenalizedCELoss: Custom loss that applies higher penalties to false positives and false negatives.</br>
+</br>
+## 🏋️ 2. train_unet.py – Train the Model
+
+Trains the model using the data in xray/train and xray/val, validates accuracy and confusion matrix every few epochs, and saves the model to unet_classifier.pth.
+
+<pre> Run the training script with `python train_unet.py`. </pre></br>
+
+This will:</br>
+ - Train for 100 epochs</br>
+ - Print validation loss and accuracy</br>
+ - Show confusion matrix every 10 epochs</br>
+ - Save the model to unet_classifier.pth</br>
+ 
+ </br>
+ 
+ ## 🔍 3. infer_unet.py – Run Inference
+ 
+Run predictions on all images in the xray/inf/ directory using the saved model.
+
+<pre> Run the training script with `python infer_unet.py`. </pre></br>
+## ✅ Output
+Console:
+<pre>
+img001.jpg --> pneumonia
+img002.jpg --> normal</pre>
+
+File: xray/inf/predictions.txt
+<pre>
+img001.jpg	pneumonia
+img002.jpg	normal</pre>
