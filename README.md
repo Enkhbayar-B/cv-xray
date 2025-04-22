@@ -5,6 +5,8 @@ It supports:
  - Custom training with penalized loss (False Positive/Negative aware)</br>
  - Easy model saving and loading</br>
  - Folder-based image classification inference</br>
+ ![Screenshot 2025-04-16 194227](https://github.com/user-attachments/assets/9016fb85-bc6a-49cd-ab59-c8fcdef45f1f)
+
 
 ## 📁 Project Structure
 
