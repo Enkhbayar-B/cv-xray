@@ -24,6 +24,17 @@ unet/</br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── test/</br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── inf/</br>
 </br>
+## 📂 Dataset
+
+This project utilizes two publicly available chest X-ray datasets:</br>
+</br>
+Chest X-Ray Images (Pneumonia)</br>
+https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia</br>
+</br>
+CoronaHack - Chest X-Ray Dataset</br>
+https://www.kaggle.com/datasets/praveengovi/coronahack-chest-xraydataset</br>
+</br>
+Make sure to organize these datasets into the xray/ folder with train/, val/, test/, and inf/ subdirectories for seamless training and inference.</br>
 ## 🧠 1. unet_model.py – Model & Custom Loss
 
 This module defines:</br>
